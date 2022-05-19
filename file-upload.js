@@ -375,13 +375,9 @@ function sharepointDownloadFile(access_token) {
 
 function deleteFile(access_token) {
     $(".dform_fileupload_progressbar").html("<div style='width: 0%;'>");
-
     var selector = formParams.deleteFileSelector;
-
     var fileID = KDF.getVal('txt_sharepointID_' + selector);
     var deleteURL = formParams.fileUploadUrl + fileID;
-
-
     $.ajax({
         url: deleteURL,
         processData: false,
